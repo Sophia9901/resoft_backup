@@ -1,0 +1,212 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+a{
+  text-decoration: none;
+  color: #000;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+div {
+  display: block;
+}
+.fa-circle-plus:before, .fa-plus-circle:before {
+  content: "\f055";
+}
+
+.box_wrap{
+  width: 100%; 
+  background: #04088a; 
+  overflow: hidden; 
+  box-sizing: border-box; 
+  height: 300px;}
+
+  .box_wrap .img_btn{
+  position: relative;
+  height: 100%; 
+  max-width: 1400px; 
+  margin: 0 auto;}
+
+  .box_wrap img{
+  position: absolute; 
+  bottom: 0;}
+
+  .box_wrap .box_btn{
+  position: absolute; 
+  display: flex; 
+  gap: 15px; 
+  right: 0; 
+  bottom: 15%;}
+
+  .box_wrap .box_btn button{
+  font-size: 15px; 
+  font-weight: 600; 
+  border: none; 
+  width: 185px; 
+  height: 50px;}
+
+  .box_wrap .box_btn button:first-child a{
+  color: #ee72d8;}
+
+  .box_wrap .box_btn button:last-child a{
+  color: white;}
+
+.clients-img-wrap ul li .img-wrap {
+  width: 120px; 
+  position: relative; 
+  height: 120px; 
+  border: 3px solid #dddddd; 
+  border-radius: 50%;}
+
+  .clients-img-wrap{
+  text-align: center; 
+  max-width: 1400px; 
+  margin: 150px auto;}
+
+  .clients-img-wrap ul{
+  display: flex; 
+  flex-wrap: wrap;}
+
+  .clients-img-wrap ul li{
+  color: #a3a3a3; 
+  font-size: 18px; 
+  width: calc(100% / 9);
+  margin-bottom: 50px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;}
+
+  .clients-img-wrap ul li .img-wrap{
+  width: 120px; 
+  position: relative; 
+  height: 120px; 
+  border: 3px solid #dddddd; 
+  border-radius: 50%;}
+
+  .clients-img-wrap ul li img{
+  max-width: 100%; 
+  padding: 20px; 
+  margin-bottom: 5px; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%)}
+
+
+  .clients-img-wrap ul li p{
+  font-size: 16px; 
+  padding-top: 15px; 
+  word-break: break-all}
+
+  .clients-img-wrap .load{
+  background: transparent; 
+  cursor: pointer; 
+  border: none; 
+  display: none;}
+
+  .clients-img-wrap .load i{
+  font-size: 80px; 
+  color: #04088a;}
+
+element.style {
+  display: block;
+  visibility: visible;
+  animation-delay: 0.9s;
+  animation-name: fadeInUp;
+}
+
+@media screen and (max-width:1217px) {
+  .box_wrap .box_btn{
+    bottom: 10%;}
+	.box_wrap{
+    height: 250px;}
+	.box_wrap img{
+    width: 50%;}
+  .clients-img-wrap ul li{
+    width: calc(100% / 8);}
+	.clients-img-wrap ul li .img-wrap{
+    width: 10vw; 
+    height: 10vw;}
+	.clients-img-wrap ul{
+    margin: 0 5%;}
+	.clients-img-wrap .load{
+    display: initial;}
+}	
+
+@media screen and (max-width: 940px){
+  .box_wrap
+  {height: 400px; 
+    text-align: center;}
+  .box_wrap img{
+    width: 60%;
+    position:unset; 
+    margin: 70px 0;}
+  .box_wrap .box_btn{
+    position: unset; 
+    flex-direction: column; 
+    align-items: center;}
+  .box_wrap .box_btn button{
+    width: 60%;}
+  .clients-img-wrap ul{
+    max-width: 500px; 
+    margin: 0 auto;}
+  .clients-img-wrap ul li{
+    width: calc(100% / 4 - 6%); 
+    margin: 0 3% 30px 3%;}
+  .clients-img-wrap ul li .img-wrap{
+    width: 110px; 
+    height: 110px;}
+  .clients-img-wrap .load i{
+    font-size: 70px;}
+}
+
+
+
+
+
+

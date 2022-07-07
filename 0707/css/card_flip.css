@@ -1,0 +1,249 @@
+a{
+    text-decoration: none;
+    color: #000;
+  }
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+.b_wrap {
+    padding: 200px 0;
+    overflow: hidden;
+}
+
+.content_wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.content_wrap ul { /* 카드 중간정렬 */
+    text-align: center;
+}
+
+.business_list {
+    cursor: pointer;
+    width: 100%;
+} 
+
+.center_wrap li {
+    width: 100%;
+}
+
+.title, .subTitleEng {
+    font-family: 'Noto Sans KR', sans-serif;
+    white-space: nowrap;
+}
+
+.title {    
+    color: #2e2e2e;
+    font-size: 23px;
+    margin: 10px 0;
+    letter-spacing: -1px;
+    font-weight: 550;   
+}
+
+.subTitleEng {
+    color: #ee7ed8;
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: 650;
+}
+
+.img_wrap {
+    position: relative;
+    height: 185px;
+}
+
+.img_wrap img { /* 이미지정렬 */
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#firstIconSize { /* 첫 번째 이미지 사이즈 조절 */
+    width: 140px;
+    height: 65.45px;
+}
+
+/* card flip css */
+.flip { /* 카드 */
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    width: calc(100% / 4 - 3%);
+    height: 350px;
+    position: relative;
+    margin: 0 1%;
+    max-width: 308px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: 1s;
+    perspective: 1000rem;
+    /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
+       3D transform과 같이 자주 사용 */
+}
+
+.front a { /* 카드 내 중간정렬 */
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+}
+
+.flip_item {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+.front, .back { /* 뒷 카드 안보이게 */
+    backface-visibility: hidden;
+}
+
+.front{
+    position: absolute;
+    transform: rotateY(0deg);
+}
+
+.back{ /* 뒷면은 사전에 미리 뒤집기 */
+    transform: rotateY(180deg);
+}
+
+.flip:hover { /* 호버 시 뒤집기 */
+    transform: rotateY(180deg); /*y축을 기준으로 180도까지회전*/
+    background-color: #000;
+}
+
+.layoutImg img {
+    position: relative;
+    background-size: cover;
+}
+
+.darken { /* 뒷 카드 이미지 밝기 */
+    filter: brightness(50%);
+    height: 350px;
+    width: 100%;
+}
+
+.app-text { /* 뒷 카드 text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;    
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: 'ypseo';
+    text-align: center;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.8;
+    white-space: nowrap;
+}
+
+
+@media (max-width:940px) {
+    .b_wrap{height: 875.19px;}
+    .business_list {width: 100%;}
+    .flip {
+        justify-content: center;
+        width: calc(100% / 2 - 3%);
+        height: 300px;
+        margin-bottom: 30px;
+
+    }
+    .front a{
+        margin-top: 15%;
+    }
+
+    .darken {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+@media (max-width:640px) {
+    .title {font-size: 20px;}
+    .subTitleEng {font-size: 13px;}
+    .flip {
+        margin-bottom: 15px;
+        padding: 0;
+        justify-content: center;
+        width: 276px; height: 250px;
+    }
+    .img_wrap img {
+        width: 80px;
+        height: 80px;
+    }
+    #firstIconSize {
+        width: 140px;
+        height: 65.44px;
+    }
+    .darken {
+        height: 250px;
+        width: 100%;
+    } 
+    .front a{
+        margin-top: 10%;
+    }
+}
+
+@media (max-width:430px) {
+    .flip {
+        justify-content: center;
+        width: 374.41px;
+        height: 250px;
+    }
+    .front a{
+        margin-top: 10%;
+    } 
+    .darken {
+        height: 250px;
+        width: 100%;
+    }
+}
