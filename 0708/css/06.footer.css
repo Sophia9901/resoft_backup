@@ -1,0 +1,65 @@
+/*footer*/
+
+footer {
+  width: 100%;
+  clear: both;
+  position: relative;
+  background: navy;
+}
+.footer_wrap {
+  background-image: url('./img/footer2.png');
+  background-size: cover;
+}
+
+.footer_wrap {
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  padding: 80px 50px;
+  display: flex;
+}
+
+.footer_wrap .footer_content {
+  margin-left: 5%;
+  width: 85%;
+  display: inline-block;
+}
+
+.footer_wrap .footer_content_wht {
+  color: white;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.footer_wrap .footer_content .footer_info_wrap {
+  color: #b9b9b9;
+  line-height: 25px;
+}
+
+.footer_wrap .footer_info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer_wrap .footer_info p:nth-of-type(5) {
+  width: 100%;
+}
+
+.footer_wrap .footer_info p {
+  margin: 0 !important;
+  width: calc(100% / 2); /*width 의 값을 100%센트를 나누기 2하여 사용한다.*/
+}
+
+.footer_wrap .copyright {
+  color: #828282;
+}
+
+@media screen and (max-width: 1299px) {
+	.footer_wrap > div {
+		margin-left: 0px;
+	}	
+}
+@media screen and (min-width: 1300px) {
+	.footer_wrap > div {
+		margin-left: 250px;
+	}	
+}
