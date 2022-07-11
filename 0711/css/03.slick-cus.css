@@ -1,0 +1,117 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+:root {
+  --navy-color: #04088a;
+  --pink-color: #ee72d8;
+}
+
+/* slide 영역 */
+
+.news_wrap {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #f8f8f8;
+}
+
+.title {
+  text-align: center;
+}
+
+.cotainer_slider {
+  max-width: 1400px;
+  margin: 55px auto;
+  clear: both;
+}
+.cotainer_slider .slide_box{
+  overflow: hidden;
+
+} 
+.slide_box .slide_list {
+  width: 330px;
+  height: 300px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+.slide_box .slide_list .slide_list_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  padding: 40px 38px;
+  box-sizing: border-box;
+}
+.slide_box .slide_list .slide_list_item .proj_title{
+  height: 100%;
+  font-size: 20px;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  line-height: 1.5;
+}
+.slide_box img {
+  width: 100%;
+  transform: scale(1);
+  transition: transform .3s;
+}
+
+/* cus 영역 */
+.cus-wrap {
+  width: 100%;
+  background: url(../img/web.png) no-repeat;
+  position: relative;
+  background-position: center;
+  max-width: 1400px;
+  height: 1100px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 250px;
+}
+
+.cus-wrap .ecoce-bot {
+  position: absolute;
+  top: 5%;
+  right: 0;
+}
+
+.cus-wrap .ministry-Environ-img {
+  position: absolute;
+  right: 0;
+  top: 290px;
+  width: 350px;
+}
+
+.cus-wrap .ecoce-img-wrap {
+  position: relative;
+  height: 100%;
+  top: 160px;
+  width: 960px;
+}
+
+.cus-wrap .ecoce-img-wrap .ecoce-img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.cus-wrap .eco-clean-earth {
+  position: absolute;
+  right: 0;
+  top: 830px;
+  text-align: right;
+  line-height: 45px;
+  margin-top: 50px;
+}
+
+.cus-wrap .eco-clean-earth p:first-child {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.cus-wrap .eco-clean-earth p:last-child {
+  font-size: 30px;
+}

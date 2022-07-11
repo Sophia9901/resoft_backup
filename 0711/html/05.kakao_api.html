@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>kakao_api</title>
+	<!-- css reset -->
+  <link rel="stylesheet" href="../css/reset.css">
+	<!-- basic -->
+	<link rel="stylesheet" type="text/css" href="../css/05.kakao_api.css">
+	<!-- 애니메이션 -->
+	<link rel="stylesheet" href="../css/animate.css">
+	<!-- 지도 -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- wowJS -->
+	<script src="../js/wow.min.js"></script>
+</head>
+</header>
+
+<body>
+
+	<script>
+		$(document).ready(function () {
+
+			new WOW().init();
+
+		});
+	</script>
+
+	<div class="map-wrap">
+		<div id="map" class="indexKakaoMap wow fadeIn" data-wow-delay="0.3s"></div>
+		<div class="map-info-wrap wow fadeInRight" data-wow-delay="0.5s">
+			<div class="map-info">
+				<p>TEL</p>
+				<a href="tel:053-475-2110;" style="cursor: text">
+					<p>(053) 475-2110</p>
+				</a>
+			</div>
+			<div class="map-info">
+				<p>FAX</p>
+				<a href="javascript:void(0);" style="cursor: text">
+					<p>(0504) 257-5966</p>
+				</a>
+			</div>
+			<div class="map-info">
+				<p>E-MAIL</p>
+				<p>call@resoft.kr</p>
+			</div>
+			<div class="map-info">
+				<p>ADDRESS</p>
+				<p>(41260) <br />
+					대구광역시 동구 동대구로 465,
+					대구스케일업허브(DASH) 704호<br />
+					(주)리소프트
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=067f7b942819e19fc2f3202be6e39efd"></script>
+
+	<script src="../js/kakao_api.js"></script>
+</body>
+
+</html>
