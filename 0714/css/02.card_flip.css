@@ -1,0 +1,235 @@
+/* card flip 효과 */
+:root {
+    --navy-color: #04088a;
+    --gray-color: #dddddd;
+    --font-gray-color: #a3a3a3;
+    --lightnavy-color: #0806d1;
+}
+
+body {
+    font-family: 'Montserrat', 'Noto Sans KR';
+}
+
+.b_wrap {
+    padding: 200px 0;
+    overflow: hidden;
+}
+
+.content_wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.content_wrap ul { /* 카드 중간정렬 */
+    text-align: center;
+}
+
+.business_list {
+    cursor: pointer;
+    width: 100%;
+} 
+
+.center_wrap li {
+    width: 100%;
+}
+
+.center_wrap .front .title {    
+    color: #2e2e2e;
+    font-size: 23px;
+    margin: 10px 0;
+    letter-spacing: -1px;
+    font-weight: 550;   
+}
+
+.img_wrap { /* front 이미지 정렬위해 relative */
+    position: relative;
+    height: 185px;
+}
+
+.img_wrap img { /* 이미지정렬 */
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#firstIconSize { /* 첫 번째 이미지 사이즈 조절 */
+    width: 140px;
+    height: 65.45px;
+}
+
+/* card flip css rotate */
+.flip { /* 카드 */
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(100% / 4 - 3%);
+    height: 350px;
+    position: relative;
+    margin: 0 1%;
+    max-width: 43%;
+}
+
+.flip_li { /* 카드 */
+    box-sizing: border-box;
+    background-color: #fff;
+    width: calc(100% / 4 - 3%);
+    height: 350px;
+    position: relative;
+    margin: 0 1%;
+    transform-style: preserve-3d;
+    /* transition: .8s; */
+    perspective: 1000rem;
+    /* 보고 있는 요소의 위치를 추정하여 원근감으로 3D환경 조성
+       3D transform과 같이 자주 사용 */
+    box-shadow:
+    0 19px 38px rgba(0,0,0,0.15),
+    0 15px 12px rgba(0,0,0,0.11);
+}
+
+.front a { /* 카드 내 중간정렬 */
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 50;
+    left: 50;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+}
+
+.flip_item {
+    visibility: visible;
+    position: absolute;
+}
+
+.front, .back { /* 뒷 카드 안보이게 */
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.back{ /* 뒷면은 사전에 미리 뒤집기 */
+    transform: rotateY(-180deg);
+}
+
+.flip_li {
+    transform-style: preserve-3d;
+    transition: transform .8s;
+    perspective: 1000rem;
+}
+
+.flip_li:hover { /* 호버 시 뒤집기 */
+     transform: rotateY(180deg); /* y축을 기준으로 180도까지회전 */
+}
+/* 호버 시 뒤집기 */
+.b_wrap .business_list .flip:hover .front{
+    transform: rotateY(180deg); /* y축을 기준으로 180도까지회전 */
+}
+.b_wrap .business_list .flip:hover .back{
+    transform: rotateY(180deg);
+    /* background-color: #000; */
+}
+
+.layoutImg img {
+    position: relative;
+    background-size: cover;
+}
+
+.darken { /* 뒷 카드 이미지 밝기 */
+    filter: brightness(50%);
+    height: 350px;
+    width: 100%;
+}
+
+.app-text { /* 뒷 카드 text */
+    position: absolute;
+    top: calc(50% - 50px);
+    /* left: 50%; */
+    width: 100%;
+    /* transform: translate(-50%, -50%); */
+    font-size: 20px;
+    font-family: 'ypseo';
+    text-align: center;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.8;
+    transform: rotateY(0deg);
+}
+
+
+@media (max-width:940px) {
+    .b_wrap {max-width: 940px; padding: 40px 0;}
+    .business_list {flex-wrap: wrap;}
+    .flip {
+        width: calc(100% / 2 - 4%);
+        height: 300px;
+        margin: 2%;
+    }
+    .flip_li{
+        height: 100%;
+    }
+    .front {        
+        background-color: #fff;
+    }
+    .front a{
+        margin-top: 15%;
+    }
+    .back{
+        right: -6px;
+        padding: 0 2px;
+    }
+    .darken {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+	.b_wrap{max-width: 100%; margin: 0 auto; height: auto; padding: 40px 0;}
+	.b_wrap .busi_content_wrap {padding: 60px 20px;}    
+}
+
+@media (max-width:640px) {
+    .b_wrap {padding: 40px 0;}
+    .title {font-size: 20px;}
+    .subTitleEng {font-size: 13px;}
+    .flip {
+        margin-bottom: 15px;
+        padding: 0;
+        width: calc(100% / 2 - 3%); height: 250px;
+    }
+    .img_wrap img {
+        width: 80px;
+        height: 80px;
+    }
+    #firstIconSize {
+        width: 140px;
+        height: 65.44px;
+    }
+    .darken {
+        height: 250px;
+        width: 100%;
+    } 
+    .front a{
+        margin-top: 10%;
+    }
+    #lastIconSize {height: 48px;}
+}
+
+@media (max-width:430px) {
+    .b_wrap {padding: 40px 0;}
+    .flip {
+        max-width: 354.41px;
+        width: 100%;        
+        height: 250px;
+    }
+    .front a{
+        margin-top: 10%;
+    } 
+    .darken {
+        height: 250px;
+        width: 100%;
+    }
+}
